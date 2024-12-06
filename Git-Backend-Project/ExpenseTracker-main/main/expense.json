@@ -1,0 +1,14 @@
+[
+	{
+		"id": 1,
+		"text": "buy some",
+		"amount": 10,
+		"expense_time": "2024-10-03T15:39:36.1154867+03:00"
+	},
+	{
+		"id": 2,
+		"text": "buy  cofe",
+		"amount": 9,
+		"expense_time": "2024-10-03T15:40:46.575153+03:00"
+	}
+]

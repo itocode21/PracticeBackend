@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		
+		.container {
+			max-width: 400px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.header h1 {
+			margin: 0;
+		}
+		
+		.converter {
+			margin-top: 20px;
+		}
+		
+		.converter label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		.converter input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+		}
+		
+		.converter button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.converter button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		
+		.result {
+			margin-top: 20px;
+			padding: 10px;
+			background-color: #f9f9f9;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Unit Converter</h1>
+		</div>
+		<div class="converter">
+			<form action="/tempe" method="POST">
+				<label for="input-value">Value:</label>
+				<input type="number" id="input-value" name="value">
+				
+				<label for="input-unit">From:</label>
+				<select id="input-unit" name="fromUnit">
+					<option value="celsius">Celsius</option>
+					<option value="fahrenheit">Fahrenheit</option>
+					<option value="kelvin">Kelvin</option>
+				</select>
+				
+				<label for="output-unit">To:</label>
+				<select id="output-unit" name="toUnit">
+					<option value="celsius">Celsius</option>
+					<option value="fahrenheit">Fahrenheit</option>
+					<option value="kelvin">Kelvin</option>
+				</select>
+				
+				<button type="submit">Convert</button>
+			</form>
+			
+        </div>
+        <div class="result">
+            <p>The converted value is: {{ .Result }}</p>
+        </div>
+    </div>
+	
+    <script>
+    </script>
+</body>
+</html>
